@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/guidage.css' %}">
+  <title>Guidage de peche</title>
+</head>
+
+<body>
+  <main>
+    <aside>
+      <div class="logo"><img src="{% static 'img/logo.jpg' %}""></img></div>
+      <div class="titre">Makwa Fishing</a></div>
+      <div class="espace1"></div>
+      <div class="menu">
+        <a href="{% url 'guidage' %}">Guidage de pèche</a>
+        <a href="#" class="modal-btn modal-trigger" aria-label="open modal">
+          Blog
+        </a>
+        <a href="#">Les poissons</a>
+        <a href="#">Notre histoire</a>
+        <a href="#">Partenaires</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="espace2"></div>
+    </aside>
+    
+      <section id="boutique" class="content">
+        <p class="tSection">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus magna risus, tincidunt ut tellus quis, lobortis condimentum lacus. Nulla imperdiet, ante eu ullamcorper consequat, est tortor vehicula nibh, eu consequat massa justo quis arcu. Etiam odio velit, convallis et congue vitae, lobortis eget turpis. Cras mollis fringilla nisi, at euismod nisl finibus ut. Nunc consectetur, lectus at consectetur vestibulum, elit enim gravida magna, ut viverra nisl justo vitae est. Cras in mattis mauris. Nam sollicitudin odio vitae faucibus hendrerit. Aenean interdum magna ac ex faucibus facilisis.
+
+        </p>
+        <div class="grille">
+            {% for p in guidages %}
+            <div class="item">
+                <div class="image"><img src="/media/{{ p.img }}" alt="{{ p.imgAlt }}"></img></div>
+                <div class="body">
+                    {% if p.promo %}
+                    <div class="promo">Promo</div>
+                    {% endif %}
+                    <div class="lib1">{{ p.lib1 }}</div>
+                    <div class="lib2">{{ p.lib2 }}</div>
+                    <p class="desc">{{ p.desc }}</p>
+                </div>
+                <div class="duréeprix">
+                    <span class="durée">{{ p.durée }}</span>
+                    <span class="prix">$ {{ p.puht }} </span>
+                </div>
+                {% if p.nouveau %}
+                <div class="dnouveau">
+                    <span class="nouveau">nouveau</span>
+                </div>
+                {% endif %}
+                <div class="btnPanier">Ajouter</div>
+                <div class="ref hidden">{{ p.ref }}</div>
+                <div class="adr_img hidden">{{ p.img }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    </div>
+    <div class="rs">
+    </div>
+  </main>
+  <script src={% static 'js/index2.js' %}></script>
+</body>
+
+</html>

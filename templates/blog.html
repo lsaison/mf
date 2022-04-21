@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <title>Test CKEditor</title>
+</head>
+<body>
+  <h1>Content</h1>
+  {% autoescape off %}
+
+  {% for article in articles %}
+
+   <p>{{ article.titre }}</p>
+    <p>{{ article.content }}</p>
+    <p>{{ article.content_upload }}</p>
+
+  {% endfor %}
+
+  {% endautoescape %}
+  <script src="{% static 'js/blog.js' %}"></script>
+</body>
+</html>

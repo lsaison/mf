@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/index2.css' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
+  <link rel="mask-icon" href="{% static 'img/safari-pinned-tab.svg' %}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Makwa Fishing</title>
+</head>
+
+<body>
+  <main>
+    <aside>
+      <div class="logo"><img src="{% static 'img/logo.jpg' %}""></img></div>
+      <div class="titre">Makwa Fishing</a></div>
+      <div class="espace1"></div>
+      <div class="menu">
+        <a href="{% url 'guidage' %}">Guidage de pèche</a>
+        <a href="#" class="modal-btn modal-trigger" aria-label="open modal">
+          Blog
+        </a>
+        <a href="#">Les poissons</a>
+        <a href="#">Notre histoire</a>
+        <a href="#">Partenaires</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="espace2"></div>
+    </aside>
+    <div class="content">
+      <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+        <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+          <button class="close-modal modal-trigger" aria-label="close modal">X</button>
+          {% autoescape off %}
+            <p class="titre_blog">{{ article.titre }}</p>
+            <p>{{ article.content_upload }}</p>
+          {% endautoescape %}
+        </div>
+      </div>
+    </div>
+    <div class="rs">
+    </div>
+  </main>
+  <script src={% static 'js/index2.js' %}></script>
+</body>
+
+</html>

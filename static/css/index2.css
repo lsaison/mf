@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Ramaraja', serif; */
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    --color-base: #1b4d21;
+    --color-fonce: #201453;
+    --color-clair: #DBA963;
+    --color-gris: #747474;
+    --font-makwa: 'Ramaraja', serif;
+    --font-serif: 'Libre Baskerville', serif;
+    --font-sans: 'Roboto', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 6fr 0.5fr;
+    background-image: url("../img/river.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+aside {
+    z-index: 1;
+
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 0.8fr 0.5fr 2fr 0.8fr;
+    gap: 5px;
+    align-items: start;
+    justify-items: center;
+    text-align: center;
+}
+.titre_blog{
+    text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size : 2em;
+    margin: 10px auto;
+    background-color: grey;
+}
+.rs{
+    width: 100%;
+    z-index: 1;
+    -webkit-box-shadow: 0px 2px 15px -4px #47FF5C;
+    box-shadow: 0px 2px 15px -4px #47FF5C;
+    background: #FFFFFF88;
+}
+.logo img {
+    width: 100%;
+    /* height: 17rem; */
+}
+
+aside .titre {
+    -webkit-box-shadow: 0px 2px 15px -4px #47FF5C;
+    box-shadow: 0px 2px 15px -4px #47FF5C;
+    background: #FFFFFF88;
+    font-size: 4rem;
+    font-family: var(--font-makwa);
+    letter-spacing: 2px;
+    line-height: 4rem;
+}
+
+aside .titre a {
+    overflow: hidden;
+    color: black;
+}
+
+aside .menu {
+    -webkit-box-shadow: 0px 2px 15px -4px #47FF5C;
+    box-shadow: 0px 2px 15px -4px #47FF5C;
+    background: #FFFFFF88;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-family: var(--font-serif);
+    letter-spacing: .2rem;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+}
+
+aside .menu a {
+    color: #000;
+    font-weight: bolder;
+}
+
+.modal-btn {
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+}
+
+.modal-container {
+    visibility: hidden;
+    position: fixe;
+    top: 0;
+    /* width: 100vw;
+    height: calc(100vh -10px); */
+    transition: visibility 0.4s;
+}
+
+.modal-container.active {
+    visibility: visible;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: #201453A0;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 50%;
+    height: 90%;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 30px;
+    overflow-y: scroll;
+    background: #FFF;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease-out,
+        transform 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+    opacity: 1;
+    /* transform: translate(-50%, -50%); */
+    transition: opacity 0.4s 0.2S ease-out,
+        transform 0.4s 0.2S ease-out;
+}
+
+.modal-container.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.close-modal {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #FF365E;
+    color: #FFF;
+}
+
+::-webkit-scrollbar {
+    width: 15px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-gris);
+    border-radius: 6px
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-fonce);
+    border-radius: 6px
+}
+
+.modal {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+}
