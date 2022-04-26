@@ -42,14 +42,22 @@ header {
     top: 0;
 }
 
+.titre{
+  display: none;
+}
+.hamburg{
+  display: none;
+}
 nav{
-  width: 100%;
+  width: 100%;  
 }
 
 nav ul{
   padding: 0;
   text-align: center;
-  margin:0;
+  margin: 0;
+  transition: 1s;
+  overflow: hidden;
 }
 
 nav ul li{
@@ -492,7 +500,43 @@ main {
 /* ===== Mobile ===== */
 @media only screen and (max-width: 767px) {
     header{
-        display: none;
+        min-height: 0;
+    }
+    .hamburg{
+      display: block;
+      color: #FFF;
+      background: #000;
+      width: 100%;
+      cursor: pointer;
+      text-align: right;
+      padding: 15px 24px;    
+    }
+    .logo{
+      display: none;
+    }
+    .titre{
+      display: block;
+      position: fixed;
+      top: 0;
+      color: #FFF;
+      font-size: 3rem;
+      font-family: var(--font-makwa);
+    }
+    nav ul{
+      max-height: 0px;
+      background: #000;
+      /* color: #FFF; */
+    }
+    nav ul li{
+      width: 100%;
+      padding: 24px 0;
+    }
+    .menu{
+      max-height: 25em;
+      padding-left: 0;
+    }
+    .menu a{
+      color: #FFF;
     }
     #presentation{
         margin: 20px 0;
