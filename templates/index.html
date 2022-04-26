@@ -9,58 +9,62 @@
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <title>Makwa Fishing</title>
 </head>
-
 <body>
   <header>
     <div class="logo"><img src="{% static 'img/logo.jpg' %}""></img></div>
-    <div class=" titre"><a href="#">Makwa Fishing</a></div>
-    <div class="menu">
-      <a href="#">Services et produits</a>
-      <a href="#">Blog</a>
-      <a href="#">Les poissons</a>
-      <a href="#">Notre histoire</a>
-      <a href="#">Partenaires</a>
-      <a href="#">Contact</a>
-    </div>
+    <nav>
+
+      <!-- <div class="titre"><a href="#">Makwa Fishing</a></div> -->
+      <div class="menu">
+        <ul>
+          <li><a href="#">Services<br>et produits</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Les poissons</a></li>
+          <li><a href="#">Notre histoire</a></li>
+          <li><a href="#">Partenaires</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <main>
     <section id="presentation">
       <img src="{% static 'img/presentation.png' %}"></img>
       <div class="body">
         <p class="titre">Lorem ipsum dolor sit amet.</p>
-        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga quibusdam accusamus exercitationem labore magni officia, maiores omnis aliquam cumque.</p>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga quibusdam accusamus
+          exercitationem labore magni officia, maiores omnis aliquam cumque.</p>
       </div>
     </section>
     <section id="boutique">
       {% for p in produits %}
       <div class="item">
-          <div class="image"><img src="/media/{{ p.img }}" alt="{{ p.imgAlt }}"></img></div>
-          <div class="body">
-              {% if p.promo %}
-              <div class="promo">Promo</div>
-              {% endif %}
-              <div class="lib1">{{ p.lib1 }}</div>
-              <div class="lib2">{{ p.lib2 }}</div>
-              <p class="desc">{{ p.desc }}</p>
-          </div>
-          <div class="duréeprix">
-              <span class="durée">{{ p.durée }}</span>
-              <span class="prix">$ {{ p.puht }} </span>
-          </div>
-          {% if p.nouveau %}
-          <div class="dnouveau">
-              <span class="nouveau">nouveau</span>
-          </div>
+        <div class="image"><img src="/media/{{ p.img }}" alt="{{ p.imgAlt }}"></img></div>
+        <div class="body">
+          {% if p.promo %}
+          <div class="promo">Promo</div>
           {% endif %}
-          <div class="btnPanier">Ajouter</div>
-          <div class="ref hidden">{{ p.ref }}</div>
-          <div class="adr_img hidden">{{ p.img }}</div>
+          <div class="lib1">{{ p.lib1 }}</div>
+          <div class="lib2">{{ p.lib2 }}</div>
+          <p class="desc">{{ p.desc }}</p>
+        </div>
+        <div class="duréeprix">
+          <span class="durée">{{ p.durée }}</span>
+          <span class="prix">$ {{ p.puht }} </span>
+        </div>
+        {% if p.nouveau %}
+        <div class="dnouveau">
+          <span class="nouveau">nouveau</span>
+        </div>
+        {% endif %}
+        <div class="btnPanier">Ajouter</div>
+        <div class="ref hidden">{{ p.ref }}</div>
+        <div class="adr_img hidden">{{ p.img }}</div>
       </div>
       {% endfor %}
     </section>
     <section id="blog">
       <div class="blog-card">
-        
         <div class="meta">
           <div class="photo" style="background-image: url(/static/img/blog01.jpg)"></div>
           <ul class="details">
@@ -71,13 +75,14 @@
         <div class="description">
           <h1>Lorem ipsum dolor sit amet.</h1>
           <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+            praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
           <p class="read-more">
             <a href="#">Lire ...</a>
           </p>
         </div>
       </div>
-      <div class="blog-card alt">
+      <div class="blog-card">
         <div class="meta">
           <div class="photo" style="background-image: url(/static/img/blog02.jpg)"></div>
           <ul class="details">
@@ -88,7 +93,8 @@
         <div class="description">
           <h1>Lorem ipsum dolor sit amet.</h1>
           <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+            praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
           <p class="read-more">
             <a href="#">Lire ...</a>
           </p>
