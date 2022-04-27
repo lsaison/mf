@@ -38,6 +38,29 @@ header {
     top: 0;
 }
 
+header .btn{
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+header .btn:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header .btn:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 nav .titre{
   display: none;
 }
@@ -101,7 +124,7 @@ main {
     width: 80%;
     margin: 0 auto;
     margin-top: 200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 #presentation{
     margin: 20px 0;
