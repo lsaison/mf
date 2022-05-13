@@ -16,6 +16,10 @@
   <link rel="mask-icon" href="{% static 'img/safari-pinned-tab.svg' %}" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+  <link rel="stylesheet" href={% static 'css/poisson.css' %} />
   <title>Makwa Fishing</title>
 </head>
 
@@ -113,7 +117,48 @@
         </div>
       </div>
     </section>
-    <section id="poissons"></section>
+    <section id="poissons">
+      <div class="blog-slider">
+        <div class="blog-slider__wrp swiper-wrapper">
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{% static 'img/perche.jpeg' %}"></img>
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">14 decembre 2020</span>
+              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+              <a href="#" class="blog-slider__button">Lire</a>
+            </div>
+          </div>
+
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{% static 'img/brown_fish.jpg' %}"></img>
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">14 decembre 2020</span>
+              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+              <a href="#" class="blog-slider__button">Lire</a>
+            </div>
+          </div>
+
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{% static 'img/saumon.jpg' %}"></img>
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">14 decembre 2020</span>
+              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+              <a href="#" class="blog-slider__button">Lire</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-slider__pagination"></div>
+      </div>
+    </section>
     <section id="histoire">
       <div class="about-section">
         <div class="inner-container">
@@ -132,7 +177,11 @@
     <section id="partenaires"></section>
     <section id="contact"></section>
   </main>
+
   <script src={% static 'js/index.js' %}></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+<script src={% static 'js/poisson.js' %}></script>
   <script>
     $(document).ready(function(){
       $(".hamburg").on("click", function(){
