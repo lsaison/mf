@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
   <link rel="stylesheet" href={% static 'css/poisson.css' %} />
+  <link rel="stylesheet" href={% static 'css/partenaires.css' %} />
+  <link rel="stylesheet" href={% static 'css/contact.css' %} />
   <title>Makwa Fishing</title>
 </head>
 
@@ -174,7 +176,35 @@
         </div>
     </div>
     </section>
-    <section id="partenaires"></section>
+    <section id="partenaire">
+      <div class="container1-grid">
+          <figure class="photo">
+              <img src="{% static 'img/partenaire/jay_siemens.png' %}" alt="" class="imgPart">
+          </figure>
+          <div class="containerTxt">
+              <h3 class="titre">Jay Siemens</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
+                  reprehenderit
+                  dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
+                  Iure?
+              </p>
+          </div>
+      </div>
+      <div class="container2-grid">
+
+          <div class="containerTxt">
+              <h3 class="titre">Les pourvoiries du Quebec</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
+                  reprehenderit
+                  dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
+                  Iure?
+              </p>
+          </div>
+          <figure class="photo">
+              <img src="{% static 'img/partenaire/pourvoiries.png' %}" alt="" class="imgPart">
+          </figure>
+      </div>
+    </section>
     <section id="contact"></section>
   </main>
 
