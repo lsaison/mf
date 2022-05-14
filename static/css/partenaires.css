@@ -1,0 +1,31 @@
+/* ===== Partenaires ====== */
+#partenaire .container1-grid {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 0 10px grey;
+}
+
+#partenaire .container2-grid {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 0 10px grey;
+}
+
+#partenaire .imgPart {
+  width: 100%;
+}
+
+#partenaire .containerTxt {
+  padding: 30px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+#partenaire .titre {
+  text-align: center;
+  margin-bottom: 10px;
+}
