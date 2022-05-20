@@ -205,7 +205,23 @@
           </figure>
       </div>
     </section>
-    <section id="contact"></section>
+    <section id="contact">
+      <div class="tSection tcontact">CONTACT</div>
+      <div class="container">
+          <div class="contact-form">
+              <i class="fa fa-map maker"><span class="form-info">Quelque part à Rouyn Noranda</span></i>
+              <i class="fa fa-phone"><span class="form-info">01 23 45 67 89</span></i>
+              <i class="fa fa-envelope"><span class="form-info">contact@mf.com</span></i>
+          </div>
+          <form action="">
+              <input type="text" placeholder="Prénom" required>
+              <input type="text" placeholder="Nom" required>
+              <input type="email" placeholder="Email" required>
+              <textarea name="message" rows="5" placeholder="Message" required></textarea>
+              <button type="submit" class="submit">Envoyer</button>
+          </form>
+      </div>
+    </section>
   </main>
 
   <script src={% static 'js/index.js' %}></script>
