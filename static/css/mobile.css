@@ -1,0 +1,98 @@
+@media only screen and (max-width: 767px) {
+  /* ===== Header ===== */
+  header{
+      min-height: 0;
+  }
+  header .hamburg{
+    display: block;
+    color: #FFF;
+    background: #000;
+    /* width: 100%; */
+    cursor: pointer;
+    text-align: right;
+    padding: 15px 24px;    
+  }
+  header .logo{
+    display: none;
+  }
+  header nav .titre{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    color: #FFF;
+    font-size: 3rem;
+    font-family: var(--font-makwa);
+  }
+  header nav .titre a{
+    text-decoration: none;
+    color: #FFF;
+  }
+  header nav ul{
+    max-height: 0px;
+    background: #000;
+  }
+  header nav ul li{
+    width: 100%;
+    padding: 10px 0;
+  }
+  header .menu{
+    max-height: 25em;
+    padding-left: 0;
+  }
+  header .menu a{
+    color: #FFF;
+  }
+   
+  main{
+    margin-top: 70px;
+  }
+  /* ===== Presentation ===== */
+  #presentation{
+      margin: 20px 0;
+      display: block;
+  }
+  #presentation img{
+      display: block;
+      margin: 0 auto;
+  }
+  #presentation .titre{
+      text-align: center;
+      font-size: 3rem;
+  }
+
+  /* ===== Boutique ===== */
+  #boutique{
+    display: block;
+  }
+  #boutique .item{
+    margin: 30px auto;
+  }
+  /* ===== Blog ===== */
+
+  .blog-slider {
+    min-height: 500px;
+    height: auto;
+    margin: 180px auto;
+  }
+  .blog-slider__item {
+    flex-direction: column;
+  }
+  .blog-slider__item {
+    flex-direction: column;
+ }
+ .blog-slider__content {
+  margin-top: -80px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+  /* ===== Histoire ===== */
+
+  .about-section{
+      padding: 0;
+  }
+  .inner-container{
+      padding: 60px;
+  }
+}

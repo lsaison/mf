@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <script src="https://kit.fontawesome.com/f65dcb3806.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
@@ -19,9 +18,16 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+  <link rel="stylesheet" href={% static 'css/header.css' %} />
+  <link rel="stylesheet" href={% static 'css/presentation.css' %} />
+  <link rel="stylesheet" href={% static 'css/boutique.css' %} />
+  <link rel="stylesheet" href={% static 'css/blog.css' %} />
   <link rel="stylesheet" href={% static 'css/poisson.css' %} />
+  <link rel="stylesheet" href={% static 'css/histoire.css' %} />
   <link rel="stylesheet" href={% static 'css/partenaires.css' %} />
   <link rel="stylesheet" href={% static 'css/contact.css' %} />
+  <link rel="stylesheet" href={% static 'css/index.css' %}>
+  <link rel="stylesheet" href={% static 'css/mobile.css' %}>
   <title>Makwa Fishing</title>
 </head>
 
@@ -54,183 +60,270 @@
           exercitationem labore magni officia, maiores omnis aliquam cumque.</p>
       </div>
     </section>
+
     <section id="boutique">
-      {% for p in produits %}
-      <div class="item">
-        <div class="image"><img src="/media/{{ p.img }}" alt="{{ p.imgAlt }}"></img></div>
-        <div class="body">
-          {% if p.promo %}
-          <div class="promo">Promo</div>
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+        <div class="titre">Services et produits</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+      </div>
+      <div class="grille">
+        {% for p in produits %}
+        <div class="item">
+          <div class="image"><img src="/media/{{ p.img }}" alt="{{ p.imgAlt }}"></img></div>
+          <div class="body">
+            {% if p.promo %}
+            <div class="promo">Promo</div>
+            {% endif %}
+            <div class="lib1">{{ p.lib1 }}</div>
+            <div class="lib2">{{ p.lib2 }}</div>
+            <p class="desc">{{ p.desc }}</p>
+          </div>
+          <div class="duréeprix">
+            <span class="durée">{{ p.durée }}</span>
+            <span class="prix">$ {{ p.puht }} </span>
+          </div>
+          {% if p.nouveau %}
+          <div class="dnouveau">
+            <span class="nouveau">nouveau</span>
+          </div>
           {% endif %}
-          <div class="lib1">{{ p.lib1 }}</div>
-          <div class="lib2">{{ p.lib2 }}</div>
-          <p class="desc">{{ p.desc }}</p>
+          <div class="btnPanier">Ajouter</div>
+          <div class="ref hidden">{{ p.ref }}</div>
+          <div class="adr_img hidden">{{ p.img }}</div>
         </div>
-        <div class="duréeprix">
-          <span class="durée">{{ p.durée }}</span>
-          <span class="prix">$ {{ p.puht }} </span>
-        </div>
-        {% if p.nouveau %}
-        <div class="dnouveau">
-          <span class="nouveau">nouveau</span>
-        </div>
-        {% endif %}
-        <div class="btnPanier">Ajouter</div>
-        <div class="ref hidden">{{ p.ref }}</div>
-        <div class="adr_img hidden">{{ p.img }}</div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </section>
+    </section> -->
+
     <section id="blog">
-      <div class="blog-card">
-        <div class="meta">
-          <div class="photo" style="background-image: url(/static/img/blog01.jpg)"></div>
-          <ul class="details">
-            <li class="author"><a href="#">Makwa Fishing</a></li>
-            <li class="date">Aug. 24, 2015</li>
-          </ul>
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
         </div>
-        <div class="description">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
-            praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p class="read-more">
-            <a href="#">Lire ...</a>
-          </p>
+        <div class="titre">Le blog</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
         </div>
       </div>
-      <div class="blog-card">
-        <div class="meta">
-          <div class="photo" style="background-image: url(/static/img/blog02.jpg)"></div>
-          <ul class="details">
-            <li class="author"><a href="#">Makwa Fishing</a></li>
-            <li class="date">July. 15, 2015</li>
-          </ul>
+      <div class="grille">
+        <div class="blog-card">
+          <div class="meta">
+            <div class="photo" style="background-image: url(/static/img/blog01.jpg)"></div>
+            <ul class="details">
+              <li class="author"><a href="#">Makwa Fishing</a></li>
+              <li class="date">Aug. 24, 2015</li>
+            </ul>
+          </div>
+          <div class="description">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+              praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+            <p class="read-more">
+              <a href="#">Lire ...</a>
+            </p>
+          </div>
         </div>
-        <div class="description">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
-            praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p class="read-more">
-            <a href="#">Lire ...</a>
-          </p>
+        <div class="blog-card">
+          <div class="meta">
+            <div class="photo" style="background-image: url(/static/img/blog02.jpg)"></div>
+            <ul class="details">
+              <li class="author"><a href="#">Makwa Fishing</a></li>
+              <li class="date">July. 15, 2015</li>
+            </ul>
+          </div>
+          <div class="description">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+              praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+            <p class="read-more">
+              <a href="#">Lire ...</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
     <section id="poissons">
-      <div class="blog-slider">
-        <div class="blog-slider__wrp swiper-wrapper">
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="{% static 'img/perche.jpeg' %}"></img>
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">14 decembre 2020</span>
-              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
-              <a href="#" class="blog-slider__button">Lire</a>
-            </div>
-          </div>
-
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="{% static 'img/brown_fish.jpg' %}"></img>
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">14 decembre 2020</span>
-              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
-              <a href="#" class="blog-slider__button">Lire</a>
-            </div>
-          </div>
-
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="{% static 'img/saumon.jpg' %}"></img>
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">14 decembre 2020</span>
-              <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque soluta, perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
-              <a href="#" class="blog-slider__button">Lire</a>
-            </div>
-          </div>
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
         </div>
-        <div class="blog-slider__pagination"></div>
+        <div class="titre">Les poissons</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+      </div>
+      <div class="grille">
+        <div class="blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="{% static 'img/perche.jpeg' %}"></img>
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">14 decembre 2020</span>
+                <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+                <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque
+                  soluta,
+                  perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+                <a href="#" class="blog-slider__button">Lire</a>
+              </div>
+            </div>
+
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="{% static 'img/brown_fish.jpg' %}"></img>
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">14 decembre 2020</span>
+                <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+                <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque
+                  soluta,
+                  perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+                <a href="#" class="blog-slider__button">Lire</a>
+              </div>
+            </div>
+
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="{% static 'img/saumon.jpg' %}"></img>
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">14 decembre 2020</span>
+                <div class="blog-slider__title">Lorem ipsum dolor sit amet.</div>
+                <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque
+                  soluta,
+                  perferendis excepturi voluptatum illum necessitatibus aliquam laborum dolorum fuga!</div>
+                <a href="#" class="blog-slider__button">Lire</a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </div>
       </div>
     </section>
+
     <section id="histoire">
-      <div class="about-section">
-        <div class="inner-container">
-            <h1>Notre histoire</h1>
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+        <div class="titre">Notre histoire</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+      </div>
+      <div class="grille">
+        <div class="about-section">
+          <div class="inner-container">
+            <h1>Lorem ipsum dolor sit amet.</h1>
             <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum,
+              eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi
+              neque voluptates sit deleniti autem error eos totam nisi neque.
             </p>
             <div class="skills">
-                <span>Guidage</span>
-                <span>Produits</span>
-                <span>Services</span>
+              <span>Guidage</span>
+              <span>Produits</span>
+              <span>Services</span>
             </div>
-        </div>
-    </div>
-    </section>
-    <section id="partenaire">
-      <div class="container1-grid">
-          <figure class="photo">
-              <img src="{% static 'img/partenaire/jay_siemens.png' %}" alt="" class="imgPart">
-          </figure>
-          <div class="containerTxt">
-              <h3 class="titre">Jay Siemens</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
-                  reprehenderit
-                  dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
-                  Iure?
-              </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partenaire">
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+        <div class="titre">Partenaires</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+      </div>
+      <div class="container1-grid">
+        <figure class="photo">
+          <img src="{% static 'img/partenaire/jay_siemens.png' %}" alt="" class="imgPart">
+        </figure>
+        <div class="containerTxt">
+          <h3 class="titre">Jay Siemens</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
+            reprehenderit
+            dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
+            Iure?
+          </p>
+        </div>
       </div>
       <div class="container2-grid">
 
-          <div class="containerTxt">
-              <h3 class="titre">Les pourvoiries du Quebec</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
-                  reprehenderit
-                  dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
-                  Iure?
-              </p>
-          </div>
-          <figure class="photo">
-              <img src="{% static 'img/partenaire/pourvoiries.png' %}" alt="" class="imgPart">
-          </figure>
+        <div class="containerTxt">
+          <h3 class="titre">Les pourvoiries du Quebec</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti veniam
+            reprehenderit
+            dolores ipsa, repellendus quasi distinctio culpa, amet libero veritatis a doloremque quae.
+            Iure?
+          </p>
+        </div>
+        <figure class="photo">
+          <img src="{% static 'img/partenaire/pourvoiries.png' %}" alt="" class="imgPart">
+        </figure>
       </div>
     </section>
+
     <section id="contact">
-      <div class="tSection tcontact">CONTACT</div>
+      <div class="line">
+        <div class="gauche">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+        <div class="titre">Contact</div>
+        <div class="droite">
+          <div class="l1"></div>
+          <div class="l2"></div>
+        </div>
+      </div>
       <div class="container">
-          <div class="contact-form">
-              <i class="fa fa-map maker"><span class="form-info">Quelque part à Rouyn Noranda</span></i>
-              <i class="fa fa-phone"><span class="form-info">01 23 45 67 89</span></i>
-              <i class="fa fa-envelope"><span class="form-info">contact@mf.com</span></i>
-          </div>
-          <form action="">
-              <input type="text" placeholder="Prénom" required>
-              <input type="text" placeholder="Nom" required>
-              <input type="email" placeholder="Email" required>
-              <textarea name="message" rows="5" placeholder="Message" required></textarea>
-              <button type="submit" class="submit">Envoyer</button>
-          </form>
+        <div class="contact-form">
+          <i class="fa fa-map maker"><span class="form-info">Quelque part à Rouyn Noranda</span></i>
+          <i class="fa fa-phone"><span class="form-info">01 23 45 67 89</span></i>
+          <i class="fa fa-envelope"><span class="form-info">contact@mf.com</span></i>
+        </div>
+        <form action="">
+          <input type="text" placeholder="Prénom" required>
+          <input type="text" placeholder="Nom" required>
+          <input type="email" placeholder="Email" required>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          <button type="submit" class="submit">Envoyer</button>
+        </form>
       </div>
     </section>
   </main>
 
   <script src={% static 'js/index.js' %}></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-<script src={% static 'js/poisson.js' %}></script>
+  <script src={% static 'js/poisson.js' %}></script>
   <script>
-    $(document).ready(function(){
-      $(".hamburg").on("click", function(){
+    $(document).ready(function () {
+      $(".hamburg").on("click", function () {
         $("nav ul").toggleClass("menu");
       });
     });

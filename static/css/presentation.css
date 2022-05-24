@@ -1,0 +1,23 @@
+#presentation{
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+#presentation img{
+  width: 300px;
+  height: 300px;
+}
+#presentation .body{
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+#presentation .titre{
+  font-family: var(--font-makwa);
+  font-size: 5rem;
+  padding-left: 10px;
+}
+#presentation .desc{
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  padding-left: 20px;
+}

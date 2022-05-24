@@ -1,11 +1,4 @@
-
-#contact {
-  height: 95vh;
-  margin: 1rem;
-  position: relative;
-}
-
-.tSection {
+/* .tSection {
   padding-top: 50px;
   border-top: 1px solid black;
   margin: 50px auto;
@@ -13,22 +6,22 @@
   letter-spacing: 1rem;
   text-align: center;
   text-transform: uppercase;
-}
+} */
 
-#contact {
-  height: 100rem;
-  background-color: #96acd5;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 4rem;
-  text-align: center;
-}
 /* ===== Contact ===== */
 #contact {
+  /* margin: 1rem;
+  position: relative;
   background: url(../img/contact.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
   padding-bottom: 2%;
+  height: 100rem;
+  background-color: #96acd5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  text-align: center; */
 }
 
 #contact .tcontact {
@@ -47,6 +40,18 @@
 }
 
 .container {
+  margin: 1rem;
+  position: relative;
+  background: url(../img/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 2%;
+  height: 50rem;
+  background-color: #96acd5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  text-align: center;
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
