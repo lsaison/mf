@@ -142,6 +142,7 @@
 }
 #poissons .blog-slider__content {
   padding-right: 25px;
+  font-family: 'Roboto', sans-serif;
 }
  @media screen and (max-width: 768px) {
   #poissons .blog-slider__content {
@@ -173,6 +174,7 @@
    margin-bottom: 20px;
 }
 #poissons .blog-slider__text {
+   font-size: 1.5rem;
    color: #4e4a67;
    margin-bottom: 30px;
    line-height: 1.5em;
