@@ -47,6 +47,17 @@
   main{
     margin-top: 70px;
   }
+
+  /* ===== Titre section ===== */
+  .line{
+    display: block;
+    padding-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .line .gauche, .line .droite{
+    display: none;
+  }
   /* ===== Presentation ===== */
   #presentation{
       margin: 20px 0;
@@ -65,6 +76,11 @@
   #boutique{
     display: block;
   }
+
+  #boutique .grille{
+    display: block;
+  }
+
   #boutique .item{
     margin: 30px auto;
   }
