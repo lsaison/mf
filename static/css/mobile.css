@@ -86,23 +86,36 @@
   }
   /* ===== Blog ===== */
 
-  .blog-slider {
+  #blog .grille{
+    display: block;
+  }
+
+  #blog .blog-card{
+    margin-bottom: 15%;
+  }
+  #blog .blog-slider {
     min-height: 500px;
     height: auto;
     margin: 180px auto;
   }
-  .blog-slider__item {
+  #blog .blog-slider__item {
     flex-direction: column;
   }
-  .blog-slider__item {
+  #blog .blog-slider__item {
     flex-direction: column;
  }
- .blog-slider__content {
+ #blog .blog-slider__content {
   margin-top: -80px;
   text-align: center;
   padding: 0 30px;
 }
 
+  /* ===== Poissons ===== */
+  #poissons .grille{
+    margin-top: -20px;
+  }
+
+ 
   /* ===== Histoire ===== */
 
   .about-section{
@@ -111,4 +124,22 @@
   .inner-container{
       padding: 60px;
   }
+
+   /* ===== Partenaires ===== */
+   #partenaire .container1-grid,
+   #partenaire .container2-grid{
+     display: block;
+   }
+
+   /* ===== Contact ===== */
+   #contact .container{
+     display: block;
+   }
+
+   #contact .contact-form{
+     display: block;
+     margin: 0;
+     padding: 0;
+     text-align: left;
+   }
 }
