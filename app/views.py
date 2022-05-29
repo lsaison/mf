@@ -6,10 +6,6 @@ def index(request):
     produits = Produit.objects.all()
     return render(request, 'index.html', {'produits':produits})
 
-def index2(request):
-    article = Article.objects.get(pk=1)
-    return render(request, 'index2.html',{'article':article})
-
 def produit(request):
     produits = Produit.objects.all()
     return render(request, 'guidage.html', {'produits':produits})
