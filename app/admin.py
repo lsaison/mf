@@ -1,7 +1,8 @@
 from django.contrib import admin
 from app.models import Article, Produit, Presentation
 
-# admin/makwa
+# admin/gs
+# cyril / makwa2022
 
 
 @admin.register(Article)
@@ -11,8 +12,8 @@ class ArticleAdmin(admin.ModelAdmin):
 @admin.register(Presentation)
 class PresentationAdmin(admin.ModelAdmin):
     fields = ('img', 'imgAlt', 'titre', 'texte')
-    list_display = ('titre','texte')
-    list_editable = ('titre')
+    list_display = ('titre', 'texte')
+
 
 @admin.register(Produit)
 class ProduitAdmin(admin.ModelAdmin):
