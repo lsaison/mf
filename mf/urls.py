@@ -8,7 +8,6 @@ from app import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('index2/', views.index2, name='index2'),
     path('produit/', views.produit, name='produit'),
     path('blog/', views.blog, name='blog'),
     path('blog_card/', views.blog_card, name='blog_card'),
