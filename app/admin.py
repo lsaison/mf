@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import Article, Produit
+from app.models import Article, Produit, Presentation
 
 # admin/makwa
 
@@ -7,6 +7,12 @@ from app.models import Article, Produit
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Presentation)
+class PresentationAdmin(admin.ModelAdmin):
+    fields = ('img', 'imgAlt', 'titre', 'texte')
+    list_display = ('titre','texte')
+    list_editable = ('titre')
 
 @admin.register(Produit)
 class ProduitAdmin(admin.ModelAdmin):

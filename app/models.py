@@ -4,6 +4,11 @@ from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
+class Presentation(models.Model):
+    img = models.ImageField(upload_to='img/', blank=True, null=True, help_text="300px x 300px")
+    imgAlt = models.CharField(max_length=255, blank=True)
+    titre = models.CharField(max_length=100)
+    texte = models.TextField(blank=True, null=True)
 
 class Article(models.Model):
     titre = models.CharField(max_length=100)
