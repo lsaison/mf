@@ -10,6 +10,9 @@ class Presentation(models.Model):
     titre = models.CharField(max_length=100)
     texte = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.titre}"
+
 class Article(models.Model):
     titre = models.CharField(max_length=100)
     date = models.DateField(auto_now=True)

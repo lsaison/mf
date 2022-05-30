@@ -54,12 +54,13 @@
   <main>
     
     <section id="presentation">
-      <img src="{% static 'img/presentation.png' %}"></img>
+    
+      <img <img src="/media/{{ presentation.img }}" alt="{{ presentation.imgAlt }}"></img>
       <div class="body">
-        <p class="titre">Lorem ipsum dolor sit amet.</p>
-        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga quibusdam accusamus
-          exercitationem labore magni officia, maiores omnis aliquam cumque.</p>
+        <p class="titre">{{ presentation.titre }}</p>
+        <p class="desc">{{ presentation.texte }}</p>
       </div>
+    
     </section>
   
     <section id="boutique">
